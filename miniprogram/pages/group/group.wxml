@@ -1,0 +1,11 @@
+<!--pages/user/qrcode/qrcode.wxml-->
+<view class="content">
+    <!-- <view class="user_wrap">
+        <view>
+            <image src="{{user}}"></image>
+        </view>
+    </view> -->
+    <view style="font-size:24rpx;padding:24rpx">扫码添加我的微信，加您入群</view>
+    <image src='{{haitao_customer_service_image}}' style="width:550rpx" mode='widthFix'></image>
+    <view style="font-size:24rpx;text-align: center;padding:24rpx">{{haitao_customer_service_content}}</view>
+</view>

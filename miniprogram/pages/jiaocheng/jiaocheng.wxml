@@ -1,0 +1,33 @@
+<view class="wrap" hover-class="none" hover-stop-propagation="false">
+    <view class="" hover-class="none" hover-stop-propagation="false" wx:for="{{cards}}" wx:key="item">
+        <view class="item" bindtap="bind_status" data-status="{{item.status}}" data-index="{{index}}">
+            <view class="flex_wrap" hover-class="none" hover-stop-propagation="false" wx:if="{{item.status==0}}">
+                    <view class="sub_title4" hover-class="none" hover-stop-propagation="false">
+                        {{item.title}}
+                    </view>
+                    <view class="" hover-class="none" hover-stop-propagation="false">
+                        <image class="icon_image"
+                            src="http://lc-XBtceMXX.cn-n1.lcfile.com/c7b066d66379983fd7aa/%E5%8F%B3%E7%AE%AD%E5%A4%B4.png"
+                            mode="widthFix" lazy-load="false" binderror="" bindload="">
+                            
+                        </image>
+                    </view>
+            </view>
+
+            <view class="" hover-class="none" hover-stop-propagation="false" wx:if="{{item.status==1}}" >
+                    <view class="sub_title" hover-class="none" hover-stop-propagation="false">
+                        {{item.title}}
+                    </view>
+                    <view class="card" hover-class="none" hover-stop-propagation="false">
+                        {{item.content}}
+                    </view>
+                    <image class="item_iamge" src="{{item.image}}" mode="widthFix" lazy-load="false"
+                        binderror="" bindload="" wx:if="{{item.image}}">
+                    </image>
+            </view>
+        </view>
+    </view>
+    <view style="height:60rpx" hover-class="none" hover-stop-propagation="false">
+        
+    </view>
+</view>

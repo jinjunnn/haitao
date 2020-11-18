@@ -1,0 +1,75 @@
+<!--pages/subs/subs.wxml-->
+<!-- 这里是微信底部弹出框的代码 
+这部分代码一定要放在最上面
+
+-->
+<view class="{{backgroundColor}}" catchtouchmove="true">
+    <view class="commodity_screen" wx:if="{{showModalStatus}}" touchmove="bind_close">
+        <view class="modal_wrap" hover-class="none" hover-stop-propagation="false">
+            <view class="title" hover-class="none" hover-stop-propagation="false">
+                完善信息
+            </view>
+            <view class="sub_title2" hover-class="none" hover-stop-propagation="false">
+                订阅卡资讯需要获取您的手机号码和微信号码
+            </view>
+            <view class="" hover-class="none" hover-stop-propagation="false">
+                
+                <input class="input" value="{{wechatid}}" type="text" placeholder="请输入微信号"
+                    placeholder-style="color:white"
+                    placeholder-class="input-placeholder" maxlength="32" focus="false" bindinput="bind_input_wechatid"
+                    bindfocus="" bindblur="" bindconfirm="">
+                    
+                </input>
+
+                <input class="input" value="{{phoneNumber}}" type="number" placeholder-style="color:white" placeholder="请输入手机号码"
+                    placeholder-class="input-placeholder" maxlength="32" focus="false"
+                    bindinput="bind_input_phoneNumber" bindfocus="" bindblur="" bindconfirm="">
+
+                </input>
+
+            </view>
+        </view>
+        <view class="modal_btn_wrap" hover-class="none" hover-stop-propagation="false">
+            <view class="button_wrap" hover-class="none" hover-stop-propagation="false">
+                <button class="left_button" bindtap="bind_close">
+                    关闭
+                </button>
+                <button class="right_button" bindtap="bind_submit_userinfo">
+                    确定
+                </button>
+            </view>
+            <view class="heihei" hover-class="none" hover-stop-propagation="false">
+                加入我们，快人一步！
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="wrap" hover-class="none" hover-stop-propagation="false">
+    <view class="wrap_item" hover-class="none" hover-stop-propagation="false" wx:for="{{cards}}" wx:key="item">
+        <view class="item">
+            <view class="flex_wrap" hover-class="none" hover-stop-propagation="false">
+                <view style='width:80rpx' hover-class="none" hover-stop-propagation="false">
+                    <image class="icon_image"
+                        src="{{item.image}}"
+                        mode="widthFix" lazy-load="false" binderror="" bindload="">
+                    </image>
+
+
+                </view>
+                <view class="sub_title4" selectable="false" space="false" decode="false">
+                    <text class="" selectable="false" space="false" decode="false"> {{item.title}}
+                        <text style="color: #a0a0a0;">每订阅一次可以发送一条服务通知，如您需要收到多条服务通知，请您多次订阅。</text>
+                    </text>
+
+                </view>
+                <view style='width:150rpx' hover-class="none" hover-stop-propagation="false">
+                    <button class="button" size="mini" bindtap='bind_subs' data-key="{{item.key}}" data-title="{{item.title}}">
+                        订阅
+                    </button>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+

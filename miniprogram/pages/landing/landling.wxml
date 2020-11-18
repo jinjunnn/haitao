@@ -1,0 +1,201 @@
+<view class="first" hover-class="none" hover-stop-propagation="false" wx:if="{{settings.landing_page_display==0}}">
+    <view class="first_a" hover-class="none" hover-stop-propagation="false" wx:if="{{settings.banner}}">
+        <image class="first_banner" src="{{settings.banner}}"
+            lazy-load="false"
+            binderror="" bindload=""></image>
+    </view>
+    <!-- <view class="first_b" hover-class="none" hover-stop-propagation="false">
+        <view bindtap="bind_share">
+            <image class="first_image"
+                src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/e7cc9a1bf655cc30d843/%E8%AE%A2%E9%98%85.png"
+                lazy-load="false" binderror="" bindload=""></image>
+            <view class="first_text" hover-class="none" hover-stop-propagation="false" plain="true">
+                卡讯订阅
+            </view>
+        </view>
+        <view bindtap="bind_jiaocheng">
+            <image class="first_image"
+                src="http://lc-XBtceMXX.cn-n1.lcfile.com/bfe0f7c60a16b6057950/%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B.png"
+                lazy-load="false" binderror="" bindload=""></image>
+            <view class="first_text" hover-class="none" hover-stop-propagation="false">
+                新手教程
+            </view>
+        </view>
+        <view bindtap="bind_team">
+            <image class="first_image"
+                src="http://lc-XBtceMXX.cn-n1.lcfile.com/cc9ee2d36a4cb2b46c1c/%E6%88%91%E7%9A%84%E7%A4%BE%E7%BE%A4.png"
+                lazy-load="false" binderror="" bindload=""></image>
+            <view class="first_text" hover-class="none" hover-stop-propagation="false">
+                加入微信
+            </view>
+        </view>
+        <view bindtap="bind_school">
+            <image class="first_image"
+                src="http://lc-XBtceMXX.cn-n1.lcfile.com/e86099a0e2c6fe3a3374/%E5%95%86%E5%AD%A6%E9%99%A202.png"
+                lazy-load="false" binderror="" bindload=""></image>
+            <view class="first_text" hover-class="none" hover-stop-propagation="false">
+                海淘学院
+            </view>
+        </view>
+    </view> -->
+
+    <view class="first_a" hover-class="none" hover-stop-propagation="false" wx:if="{{settings.sub_banner}}">
+        <image class="first_sub_banner" src="{{settings.sub_banner}}"
+            lazy-load="false" binderror="" bindload=""></image>
+    </view>
+    <view class="second_b" hover-class="none" hover-stop-propagation="false">
+        <view bindtap="bind_nav" data-url='/pages/list/list?key={{buy_goods}}&title=同行收货' class="the_item">
+            <image class="second_image"
+                src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/58143788e67de70e56b9.png/%E7%83%AD%E5%BA%A6.png" lazy-load="false"
+                binderror="" bindload=""></image>
+            <view class="first_text" hover-class="none" hover-stop-propagation="false">
+                同行收货
+            </view>
+        </view>
+        <view bindtap="bind_nav" class="the_item" data-url='/pages/list/list?key={{sell_goods}}&title=同行出货'>
+            <image class="second_image"
+                src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/f9e6c9adfdcadebfa1a7.png/%E8%AE%A2%E5%8D%95-.png" lazy-load="false"
+                binderror="" bindload=""></image>
+            <view class="first_text" hover-class="none" hover-stop-propagation="false">
+                同行出货
+            </view>
+        </view>
+        <view bindtap="bind_nav" class="the_item" data-url='/pages/list/list?key={{sell_card}}&title=礼品卡'>
+            <image class="second_image"
+                src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/3f11cd5088b872b98619.png/%E5%85%85%E5%80%BC.png"
+                lazy-load="false" binderror="" bindload=""></image>
+            <view class="first_text" hover-class="none" hover-stop-propagation="false">
+                礼品卡
+            </view>
+        </view>
+        <view bindtap="bind_nav" class="the_item" data-url='/pages/list/list?key={{pindan}}&title=代刷/拼单'>
+            <image class="second_image"
+                src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/838ae3ee34f6a2f91158.png/%E9%92%B1%E5%8C%85.png" lazy-load="false"
+                binderror="" bindload=""></image>
+            <view class="first_text" hover-class="none" hover-stop-propagation="false">
+                代刷/拼单
+            </view>
+        </view>
+        <view bindtap="bind_nav" class="the_item" data-url='/pages/list/list?key={{black_list}}&title=不诚信名单'>
+            <image class="second_image"
+                src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/f95003efd5ed00c894fe.png/%E9%BB%91%E5%90%8D%E5%8D%95.png"
+                lazy-load="false" binderror="" bindload=""></image>
+            <view class="first_text" hover-class="none" hover-stop-propagation="false">
+                不诚信名单
+            </view>
+        </view>
+        <view bindtap="bind_nav" class="the_item" data-url='/pages/list/list?key={{goods_info}}&title=优惠情报'>
+            <image class="second_image"
+                src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/4bea6f7ff0e8cddad935.png/%E5%8A%A8%E6%80%81.png"
+                lazy-load="false" binderror="" bindload=""></image>
+            <view class="first_text" hover-class="none" hover-stop-propagation="false">
+                优惠情报
+            </view>
+        </view>
+        <view bindtap="bind_nav" class="the_item" data-url='/pages/brief/brief?title=shop'>
+            <image class="second_image"
+                src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/7e39c278f011d9917a40.png/%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97.png"
+                lazy-load="false" binderror="" bindload=""></image>
+            <view class="first_text" hover-class="none" hover-stop-propagation="false">
+                海淘小店
+            </view>
+        </view>
+        <view bindtap="bind_nav" class="the_item" data-url='/pages/group/group'>
+            <image class="second_image"
+                src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/14de737bd3cff20d75fa.png/%E5%BE%AE%E4%BF%A1.png"
+                lazy-load="false" binderror="" bindload=""></image>
+            <view class="first_text" hover-class="none" hover-stop-propagation="false">
+                微信群
+            </view>
+        </view>
+
+        <view bindtap="bind_tap" class="the_item" data-information='快递功能暂未开放使用'>
+            <image class="second_image"
+                src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/ae6c7268a8276d24dcce.png/%E5%BF%AB%E9%80%92%E5%85%AC%E5%8F%B8.png"
+                lazy-load="false" binderror="" bindload=""></image>
+            <view class="first_text" hover-class="none" hover-stop-propagation="false">
+                快递管理
+            </view>
+        </view>
+        <view bindtap="bind_nav" class="the_item" data-url='/pages/subs/subs'>
+            <image class="second_image"
+                src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/d54e1027671aabf18f89.png/%E6%88%91%E7%9A%84%E8%AE%A2%E5%8D%95.png"
+                lazy-load="false" binderror="" bindload=""></image>
+            <view class="first_text" hover-class="none" hover-stop-propagation="false">
+                预定礼品卡
+            </view>
+        </view>
+
+        <view bindtap="bind_nav" class="the_item" data-url='/pages/jiaocheng/jiaocheng?key={{goods_info}}&title=优惠情报'>
+            <image class="second_image"
+                src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/078f88d6794acc84d98e.png/%E6%8C%87%E5%8D%97.png"
+                lazy-load="false" binderror="" bindload=""></image>
+            <view class="first_text" hover-class="none" hover-stop-propagation="false">
+                使用教程
+            </view>
+        </view>
+        <view bindtap="query_list_key" class="the_item" data-url='/pages/jiaocheng/jiaocheng'>
+            <image class="second_image"
+                src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/ea6ea48150e86c4c7796.png/%E5%8F%91%E5%B8%83.png"
+                lazy-load="false" binderror="" bindload=""></image>
+            <view class="first_text" hover-class="none" hover-stop-propagation="false">
+                发布
+            </view>
+        </view>
+
+    </view>
+
+    <view class="end" hover-class="none" hover-stop-propagation="false">
+        <view class="" hover-class="none" hover-stop-propagation="false">
+    
+        </view>
+        <text class="" selectable="false" space="false" decode="false">
+            -----END-----
+    
+            小程序由辛巴工作室开发运营
+            本小程序采用邀请注册制，仅供海淘代购用户使用
+            如有任何想法或需求请联系客服
+            我们评估需求后会根据情况开发
+            我们将尽最大努力成为您值得信任的伙伴
+    
+    
+        </text>
+    </view>
+</view>
+
+
+<view class="wrap" hover-class="none" hover-stop-propagation="false" wx:if="{{settings.landing_page_display==1}}">
+快递发货信息查询
+    <view class="input_wrap" hover-class="none" hover-stop-propagation="false">
+        <input class="input_content" value="" type="number" placeholder="请输入海淘订单手机号码" bindinput="" bindfocus=""
+            bindblur="" bindconfirm="">
+        </input>
+        <view class="input_button" hover-class="none" hover-stop-propagation="false" bindtap="bind_query_kuaidi">
+            点击查询
+        </view>
+    </view>
+    <view class="end" hover-class="none" hover-stop-propagation="false">
+        <view class="" hover-class="none" hover-stop-propagation="false">
+    
+        </view>
+        <text class="" selectable="false" space="false" decode="false">
+
+
+			目前仅支持快递功能
+			更多更能敬请期待
+					@海淘达人BB叔
+        </text>
+    </view>
+</view>
+<!-- <view class="first" hover-class="none" hover-stop-propagation="false">
+    <view class="second_b" hover-class="none" hover-stop-propagation="false">
+        <view wx:for="{{service3_items}}">
+            <image class="second_image" src="{{item.image}}" lazy-load="false" binderror="" bindload=""></image>
+            <view class="first_text" hover-class="none" hover-stop-propagation="false">
+                {{item.title}}
+            </view>
+        </view>
+    </view>
+</view> -->
+
+

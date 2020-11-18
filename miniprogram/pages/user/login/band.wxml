@@ -1,0 +1,2 @@
+<!--pages/user/login/donot_login.wxml-->
+您的账户:{{user.uid}}暂时无法访问，请联系客服微信：jinjunnn。
